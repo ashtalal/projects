@@ -1,0 +1,81 @@
+body {
+	font-family: Verdana;
+}
+
+/* main header */
+.navbar-inverse {
+	margin-bottom: 0;
+}
+
+/* content */
+.wrapper {
+	width: 80vw;
+	min-height: 86.7vh;
+	background-color: #fff;
+	margin: 0 auto;
+}
+
+#catalogWrapper {
+	height: 100%;
+}
+
+h1 {
+	margin: 0;
+}
+
+#loginForm,
+#registerForm {
+	width: 40%;
+	margin: 0 auto;
+}
+
+table,
+thead,
+tbody,
+th,
+tr,
+td {
+	border: 1px solid #000;
+	padding: 15px;
+	border-collapse: collapse;
+}
+
+.item-container > .price {
+	font-weight: bolder;
+}
+
+.item-container p:last-child {
+	height: 100px;
+	overflow: hidden;
+}
+
+.red-message {
+	color: red;
+}
+
+.green-message {
+	color: green;
+}
+
+.item-parent-container {
+	width: 30%;
+	display: inline-block;
+	margin: 10px;
+}
+
+.item-container {
+	width: 100%;
+	height: 500px;
+	background-color: lightgrey;
+	/*margin: 10px;*/
+	text-align: center;
+	border-radius: 5px;
+	/*display: inline-block;*/
+}
+
+/* main footer */
+.main-footer {
+	background-color: lightgrey;
+	padding: 15px;
+	text-align: center;
+}
