@@ -1,0 +1,30 @@
+[
+    {
+        "username": "admin",
+        "password": "admin",
+        "email": "admin@gmail.com",
+        "role": "admin",
+        "profilepic": "assets\/img\/user\/krisy.jpg"
+    },
+    {
+        "username": "jean",
+        "password": "jeaniefromtheblock",
+        "email": "jean@yahoo.com",
+        "role": "admin",
+        "profilepic": "assets\/img\/user\/mocha.jpg"
+    },
+    {
+        "username": "sad",
+        "password": "happy",
+        "email": "happy@gmail.com",
+        "role": "user",
+        "profilepic": "assets\/img\/user\/shamwow.jpg"
+    },
+    {
+        "username": "user",
+        "password": "user",
+        "email": "user@gmail.com",
+        "role": "user",
+        "profilepic": "assets\/img\/user\/blobfishy.jpg"
+    }
+]
