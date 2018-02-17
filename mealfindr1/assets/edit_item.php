@@ -16,7 +16,8 @@ echo '
 	<label>Price</label>
 	<input name="price" class="form-control" type="text" value="'.$items[$id]['price'].'">
 	<label>Image</label>
-	<input name="image" class="form-control" type="file" value="C:/xampp/htdocs/Jean-Talal/csp2-template-2/assets/img/' . $items[$id]['image'].' ">
+	<img src="assets/img/joe.jpg" style="width:300px;">
+	<input name="image" class="form-control" type="file" value="assets/img/joe.jpg">
 ';
 
 	$categories = ['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 6'];

@@ -2,7 +2,6 @@
 
 require 'connect.php'; //database connection
 
-
 session_start();
 
 // if (isset($_SESSION['current_user'])) {
@@ -34,12 +33,17 @@ include 'partials/head.php';
 		// $file = file_get_contents('assets/items.json');
 		// $items = json_decode($file, true);
 
-
 		$id = $_GET['id'];
-		$sql = "SELECT product_name, price, description FROM meals JOIN food_categories ON () where id = '$id'";
+		
+		$sql = "SELECT i.product_name, i.price, i.description, c.name FROM items i JOIN categories c ON (i.category_id=c.id) WHERE i.id = '$id'";
+
 		$result = mysqli_query($conn, $sql);
+
 		$item = mysqli_fetch_assoc($result);
+
 		extract($item);
+
+		$image = 'assets/img/joe.jpg';
 
 		?>
 		<table>
@@ -63,7 +67,7 @@ include 'partials/head.php';
 			</tr>
 			<tr>
 				<td>Category</td>
-				<td><?php echo $category; ?></td>
+				<td><?php echo $name; ?></td>
 			</tr>
 		</table>
 		<a href="<?php echo $_SERVER['HTTP_REFERER']; ?>"><button class="btn btn-default">Back</button></a>
@@ -137,7 +141,7 @@ include 'partials/foot.php';
 
 		$('#editItem').click(function() {
 			var itemId = $(this).data('index');
-			// console.log(userId);
+			// console.log(itemId);
 
 			$.get('assets/edit_item.php',
 				{

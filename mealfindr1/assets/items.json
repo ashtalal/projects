@@ -11,8 +11,8 @@
         "id": "1",
         "name": "San Mig Light",
         "description": "San Mig Light is the country's leading low calorie beer with only 100 calories per 330ml serving. That's why you'll feel so light as you enjoy its full beer flavor that hits just right...",
-        "image": "https:\/\/lorempixel.com\/300\/300\/",
-        "price": 300.25,
+        "image": "assets\/img\/dory.jpg",
+        "price": "300.25",
         "category": "Category 2"
     },
     {
