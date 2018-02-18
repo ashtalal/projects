@@ -1,0 +1,18 @@
+requirement :
+
+-table for users
+	-username
+	-password
+	-email
+	-role
+	-image
+	-first name
+	-last name
+-table for items
+	-name
+	-description
+	-price
+	-catgeory
+-table for orders
+-table for order items
+
