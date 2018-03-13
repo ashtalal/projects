@@ -27,7 +27,7 @@ include 'partials/head.php';
 		</p>
 		<br>
 		<p class="middle1">Speaking of Hassle-Free, We deliver food safe for you and for your family.
-		We promote a clean safe eating vibes, especially for the sensitive eaters out there. We know you avoid specific foods (due to allergens, lactose intolerance, etc.) follow religious observances or just trying to eat healthy. Here at MealFindr, we filter your food choices and we deliver it with love.
+		We promote a clean safe eating vibes, especially for the sensitive eaters out there. We know you avoid specific foods (due to allergens, lactose intolerance, etc.) follow religious observances or just trying to eat healthy. At MealFindr, we filter your food choices and we deliver it with love.
 		</p>
 		<br>
 		<p class="middle2">MealFindr is not just a delivery service. We empower kitchen merchants to manage their own food business out of the comfort of their own homes. You take charge of the cooking, and we do the business running for you. See? Hassle-Free.

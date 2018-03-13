@@ -34,7 +34,7 @@ include 'partials/head.php';
 			<?php
 
 			if (isset($_SESSION['current_user'])) {
-				echo '<h3>Welcome ' . $first_name . '!</h3><br>
+				echo '<h3 style="color: maroon;">Welcome ' . $first_name . '!</h3><br>
 					  <img src="'. $image .'" style="text-align: center;"><br>
 					  <form action="assets/upload.php" method="post" enctype="multipart/form-data">
 					  <input type="file" name="uploadImage" id="uploadImage">
