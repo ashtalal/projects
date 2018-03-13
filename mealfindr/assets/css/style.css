@@ -137,6 +137,23 @@ td {
 	overflow: hidden;
 }
 
+p > 
+.header, 
+.middle1,
+.middle2,
+.middle3,
+.conclusion {
+	width: 80%;
+	margin: 0 auto;
+	font-family: 'Nunito', sans-serif;
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 20px;
+	
+}
+
+
+
 .red-message {
 	color: red;
 }
