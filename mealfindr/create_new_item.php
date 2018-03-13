@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+
+if (!isset($_SESSION['current_user'])) {
+	$_SESSION['message'] = 'Sign Up to Sell Meals!';
+	header('location: register.php');
+}
+
 function getTitle() {
 	echo 'Create New Item';
 }
@@ -17,7 +24,7 @@ include 'partials/head.php';
 	<!-- wrapper -->
 	<main class="wrapper">
 
-		<h1>Create New Item Page</h1>
+		<h1>Sell Meals</h1>
 		
 		<form id="registerForm" method="POST" action="assets/createnewitem.php" class="form-group">
 			<label for="name">Name</label>

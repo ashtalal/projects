@@ -1,4 +1,4 @@
-<nav class="navbar navbar-transparent">
+<nav class="navbar navbar-transparent navbar-fixed-top navbar-static-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -8,40 +8,52 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="home.php">MealFindr</a>
+      <a class="navbar-brand" href="index.php" style="font-family: 'Nunito', sans-serif; font-size: 35px; color: maroon; font-weight: bolder;">MealFindr</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" style="font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: bolder;">
         <?php
 
         if (isset($_SESSION['current_user'])) {
           echo '
             <li>
-              <a href="#">' . ucfirst($_SESSION['current_user']) . '</a>
+              <a href="profile.php">' . ucfirst($_SESSION['current_user']) . '</a>
             </li>
           ';
         }
 
         ?>
         <li>
-          <a href="about.php">About Us</a>\
+          <a href="cart.php">My Cart
+            <?php
+            if (isset($_SESSION['item_count'])) {
+              echo '
+                <strong style="color:red;">('.$_SESSION['item_count'].')</strong>
+              ';
+            }
+            ?>
+
+          </a>
         </li>
         <li>
           <a href="catalog.php">Dishes</a>
         </li>
         <li>
-          <a href="contact.php">Contact Us</a>
+          <a href="about.php">About Us</a>
+        </li>
+        <li>
+          <a href="create_new_item.php">Sell Meals</a>
         </li>
         <?php
 
         if (isset($_SESSION['current_user'])) {
-          echo '
-            <li>
-              <a href="profile.php">Profile</a>
-            </li>
-          ';
+          // echo '
+          //   <li>
+          //     <a href="profile.php">Profile</a>
+          //   </li>
+          // ';
 
           if ($_SESSION['role'] == 'admin') {
             echo '
@@ -73,39 +85,8 @@
         }
 
         ?>
-<!-- 
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul> -->
+ 
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<br>

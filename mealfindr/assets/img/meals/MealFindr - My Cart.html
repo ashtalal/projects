@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://localhost/Jean-Talal/csp2/cart.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+
+	<title>MealFindr - My Cart</title>
+
+	<!-- imports bootstrap -->
+	<link rel="stylesheet" type="text/css" href="./MealFindr - My Cart_files/bootstrap.min.css">
+
+	<!-- imports custom stylesheet -->
+	<link rel="stylesheet" type="text/css" href="./MealFindr - My Cart_files/style.css">
+
+	<link href="./MealFindr - My Cart_files/css" rel="stylesheet"><style id="dark-reader-style" type="text/css">@media screen {
+
+/* Leading rule */
+html {
+  -webkit-filter: !important;
+}
+
+/* Text contrast */
+html {
+  text-shadow: 0 0 0 !important;
+}
+
+/* Full screen */
+*:-webkit-full-screen, *:-webkit-full-screen * {
+  -webkit-filter: none !important;
+}
+
+/* Page background */
+html {
+  background: rgb(255,255,255) !important;
+}
+
+}</style></head>
+<body>
+
+	<!-- main header -->
+	<nav class="navbar navbar-transparent">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost/Jean-Talal/csp2/index.php" style="font-family: &#39;Nunito&#39;, sans-serif; font-size: 30px;">MealFindr</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+                <li>
+          <a href="http://localhost/Jean-Talal/csp2/cart.php">My Cart
+            
+                <strong style="color:red;">(1)</strong>
+              
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost/Jean-Talal/csp2/catalog.php">Dishes</a>
+        </li>
+        <li>
+          <a href="http://localhost/Jean-Talal/csp2/about.php">About Us</a>
+        </li>
+        <li>
+          <a href="http://localhost/Jean-Talal/csp2/create_new_item.php">Sell Meals</a>
+        </li>
+                
+            <li>
+              <a href="http://localhost/Jean-Talal/csp2/login.php">Login</a>
+            </li>
+            <li>
+              <a href="http://localhost/Jean-Talal/csp2/register.php">Register</a>
+            </li>
+           
+    </ul></div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+	<!-- wrapper -->
+	<main class="wrapper">
+
+		<h1>My Cart</h1>
+		<a class="btn btn-primary" href="http://localhost/Jean-Talal/csp2/checkout.php">Secure Checkout</a><table style="margin: 0 auto;">
+			<thead>
+				<tr><th>Product Name</th>
+				<th>Image</th>
+				<th>Price</th>
+				<th>Quantity</th>
+				<th>Subtotal</th>
+				<th>Remove</th>
+								</tr></thead>
+			<tbody id="tbody">
+			
+						<tr>
+							<td><a>Paella</a></td>
+							<td><img src="./MealFindr - My Cart_files/paella.jpg" style="width: 150px; height: 150px;"></td>
+							<td>220</td>
+							<td><input id="update_Quantity" type="number" value="1" min="0" onchange="updateQuantity(2)"></td>
+							<td id="price">220</td>
+							<td>
+							<form action="http://localhost/Jean-Talal/csp2/assets/remove_to_cart.php" method="POST">
+							<input hidden="" name="prod-id" value="2">
+							<button type="submit" class="btn btn-danger">Delete</button>
+							</form>
+							</td>
+						</tr>
+						
+						<tr>
+							
+							<td colspan="4" style="text-align: right;">Gross Total</td>
+							<td colspan="2">220</td>
+							
+
+							
+						</tr>
+						
+			<!-- <td><input id="itemQuantity' . $quantity. '" type="number" min="0"></td> -->
+			</tbody>
+		</table>
+
+		
+
+	</main>
+
+	<!-- main footer -->
+	<footer class="main-footer">
+	<p>Copyright © 2018 by  MealFindr</p>
+</footer>
+	<!-- imports jquery -->
+	<script type="text/javascript" src="./MealFindr - My Cart_files/jquery-3.2.1.min.js.download"></script>
+
+	<!-- imports bootstrap.js -->
+	<script type="text/javascript" src="./MealFindr - My Cart_files/bootstrap.min.js.download"></script>
+
+	<!-- imports custom javascript -->
+	<script type="text/javascript" src="./MealFindr - My Cart_files/script.js.download"></script>
+<script type="text/javascript">
+	function updateQuantity(itemId) {
+		// console.log(itemId);
+		var id = itemId;
+
+		console.log(id);
+
+		var new_quantity = $('#update_Quantity').val();
+
+
+		$.post('assets/add_to_cart.php',
+			{
+				item_id: id,
+				item_quantity: new_quantity,
+			},
+			function(data, status) {
+				// console.log(data);
+				$('a[href="cart.php"]').html('My Cart ' + data);
+			});
+
+		$.post('assets/reload_cart.php',
+			{
+				item_id: id,
+				item_quantity: new_quantity,
+			},
+			function(data, status) {
+				// console.log(data);
+				$('#tbody').html(data);
+			});
+	}
+</script>
+
+
+</body></html>

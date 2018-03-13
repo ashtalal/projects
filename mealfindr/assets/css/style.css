@@ -1,5 +1,7 @@
 body {
-	font-family: Verdana;
+	font-family: sans-serif;
+	background-image: url(../img/flat1.jpg);
+
 }
 
 /* main header */
@@ -7,12 +9,81 @@ body {
 	margin-bottom: 0;
 }
 
+.navbar-brand > a {
+	color: Orange;
+}
+
+.navbar-nav > li > a {
+	color: #000;
+}
+
+.navbar {
+	margin-bottom: 100px;
+}
+
 /* content */
+
+/*.container-fluid > .index {*/
+	/*margin: 0 auto;*/
+	/*height: 86.7vh;*/
+
+.food-browser {
+	width: 80%;
+	height: 400px;
+	margin: 0 auto;
+	background-color: #FAEBD7;
+	border-radius: 5%;
+	text-align: center;
+	/*position: relative;*/
+	/*top: 150px;*/
+	margin-top: 150px;
+	margin-bottom: 50px;
+}
+
+
 .wrapper {
+	/*margin-top: 100px;*/
+	/*padding-top: 200px;*/
+	width: 80vw;
+	min-height: 86.7vh;
+	background-color: #FAEBD7;
+	margin: 0 auto;
+}
+
+.wrapper-itemphp {
 	width: 80vw;
 	min-height: 86.7vh;
 	background-color: #fff;
 	margin: 0 auto;
+}
+
+.profile-wrapper {
+	width: 40%;
+	margin: 0 auto;
+
+}
+
+.profile-wrapper > img {
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	
+}
+
+.home-wrapper {
+	width: 50%;
+	margin-left: 10%;
+
+}
+
+.home-wrapper > img {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	border-radius: 50%;
+	
 }
 
 #catalogWrapper {
@@ -21,6 +92,22 @@ body {
 
 h1 {
 	margin: 0;
+	text-align: left;
+	font-family: 'Lobster', cursive;
+	font-weight: bolder;
+	/*letter-spacing: 15px;*/
+	padding-bottom: 30px;
+	padding-top: 30px;
+	margin-left: 30px;
+	font-size: 70px;
+}
+
+h2 {
+	margin: 0;
+	text-align: center;
+	font-family: 'Patua One', cursive;
+	/*letter-spacing: 2px;*/
+
 }
 
 #loginForm,
@@ -35,9 +122,10 @@ tbody,
 th,
 tr,
 td {
-	border: 1px solid #000;
-	padding: 15px;
+	border: 3px solid gray;
+	padding: 10px;
 	border-collapse: collapse;
+	text-align: center;
 }
 
 .item-container > .price {
@@ -65,17 +153,39 @@ td {
 
 .item-container {
 	width: 100%;
-	height: 500px;
-	background-color: lightgrey;
+	height: 320px;
+	/*background-color: lightgrey;*/
 	/*margin: 10px;*/
 	text-align: center;
 	border-radius: 5px;
 	/*display: inline-block;*/
 }
 
+.item-container > img {
+	border-radius: 25%;
+}
+
+
+.food-browser > .food-container {
+	width: 23%;
+	height: 200px;
+	background-color: lightgrey;
+	/*margin: 10px;*/
+	margin-top: 50px;
+	text-align: center;
+	border-radius: 5px;
+	padding: 20px;
+	display: inline-block;
+}
+
+
+
 /* main footer */
 .main-footer {
 	background-color: lightgrey;
 	padding: 15px;
-	text-align: center;
+	text-align: left;
+	/*position: absolute;*/
+	bottom: 0px;
+	width: 100%;
 }

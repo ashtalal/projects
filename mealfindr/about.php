@@ -15,13 +15,15 @@ include 'partials/head.php';
 
 	<!-- main header -->
 	<?php include 'partials/main_header.php'; ?>
-
+	<br>
+	<br>
 	<!-- wrapper -->
 	<main class="wrapper">
 
-		<h1>About Page</h1>
+		<h1>About</h1>
 		
 	</main>
+	<br>
 
 	<!-- main footer -->
 	<?php include 'partials/main_footer.php'; ?>

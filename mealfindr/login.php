@@ -13,11 +13,12 @@ include 'partials/head.php';
 
 	<!-- main header -->
 	<?php include 'partials/main_header.php'; ?>
+	<br><br>
 
 	<!-- wrapper -->
 	<main class="wrapper">
 
-		<h1>Login Page</h1>
+		<h1>Login</h1>
 
 		<form id="loginForm" method="POST" action="assets/authenticate.php" class="form-group">
 			<label for="username">Username</label>
@@ -30,6 +31,7 @@ include 'partials/head.php';
 		</form>
 		
 	</main>
+	<br>
 
 	<!-- main footer -->
 	<?php include 'partials/main_footer.php'; ?>
