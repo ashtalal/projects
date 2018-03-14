@@ -36,8 +36,11 @@ include 'partials/head.php';
 			<thead>
 				<th>Username</th>
 				<th>Password</th>
+				<th>Name</th>
 				<th>Email</th>
 				<th>Role</th>
+				<th>Contact</th>
+				<th>Home Address</th>
 			</thead>
 			<tbody>
 				<?php
@@ -52,8 +55,11 @@ include 'partials/head.php';
 						<tr>
 							<td><a href="user.php?id='.$id.'">' . $username . '</a></td>
 							<td>' . $password . '</td>
+							<td>' . $first_name . '' . $last_name . '</td>
 							<td>' . $email . '</td>
 							<td>' . $role_id . '</td>
+							<td>' . $contact . '</td>
+							<td>' . $address . '</td>
 						</tr>
 					';
 				}

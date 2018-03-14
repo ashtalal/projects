@@ -33,7 +33,7 @@ include 'partials/head.php';
 		<?php
 
 		$id = $_GET['id'];
-		$sql = "SELECT u.username, u.password, u.email, u.role_id, r.description FROM users u JOIN roles r ON (r.id=u.role_id) WHERE u.id = '$id'";
+		$sql = "SELECT u.username, u.password, u.email, u.role_id, r.description, u.first_name, u.last_name, u.contact, u.address FROM users u JOIN roles r ON (r.id=u.role_id) WHERE u.id = '$id'";
 		$result = mysqli_query($conn, $sql) or die (mysqli_error($conn));
 		$user = mysqli_fetch_assoc($result);
 		extract($user);
@@ -47,6 +47,18 @@ include 'partials/head.php';
 			<tr>
 				<td>Password</td>
 				<td><?php echo $password; ?></td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td><?php echo $first_name .' '. $last_name; ?></td>
+			</tr>
+			<tr>
+				<td>Contact</td>
+				<td><?php echo $contact; ?></td>
+			</tr>
+			<tr>
+				<td>Home Address</td>
+				<td><?php echo $address; ?></td>
 			</tr>
 			<tr>
 				<td>Email</td>

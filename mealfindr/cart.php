@@ -38,7 +38,11 @@ include 'partials/head.php';
 		<?php
 				if (isset($_SESSION['current_user'])) {
 					echo '<h3 style="margin-left: 150px;">Hello ' . $first_name .'!</h3>';
+				} else if (!isset($_SESSION['current_user']) && isset($_SESSION['message'])) {
+					echo "<label>".$_SESSION['message']."</label><br>";
+					unset($_SESSION['message']);
 				}
+
 		?>
 		<br>
 		<table style="margin: 0 auto;">

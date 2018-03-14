@@ -7,6 +7,10 @@
 
 
 	<title>MealFindr - <?php getTitle(); ?></title>
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 	<!-- imports bootstrap -->
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-3.3.7-dist/css/bootstrap.min.css">

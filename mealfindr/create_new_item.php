@@ -20,18 +20,20 @@ include 'partials/head.php';
 
 	<!-- main header -->
 	<?php include 'partials/main_header.php'; ?>
+	<br>
+	<br>
 
 	<!-- wrapper -->
 	<main class="wrapper">
 
 		<h1>Sell Meals</h1>
 		
-		<form id="registerForm" method="POST" action="assets/createnewitem.php" class="form-group">
-			<label for="name">Name</label>
-			<input type="text" name="name" id="name" placeholder="Enter product name" class="form-control" required>
+		<form id="registerForm" method="POST" action="assets/createnewitem.php" class="form-group" enctype="multipart/form-data">
+			<label for="product_name">Name</label>
+			<input type="text" name="product_name" id="product_name" placeholder="Enter product name" class="form-control" required>
 
-			<label for="image">Image</label>
-			<input type="file" name="image" id="image" placeholder="Upload image" class="form-control" required>
+			<label for="uploadFoodImage">Image</label>
+			 <input type="file" name="uploadFoodImage" id="uploadFoodImage" placeholder="Upload image" class="form-control" required>
 
 			<label for="price">Price</label>
 			<input type="text" name="price" id="price" placeholder="PHP 0.00" class="form-control" required>
@@ -40,16 +42,21 @@ include 'partials/head.php';
 			<input type="text" name="description" id="description" placeholder="Type product description here" class="form-control" required>
 
 			<label for="category">Category</label><br>
-			<select id="category" class="form-control">
-			  <option value="Category 1">Category 1</option>
-			  <option value="Category 2">Category 2</option>
-			  <option value="Category 3">Category 3</option>
-			</select><br><br>
+			<select name="category" class="form-control">
+			  <option value="1">Nuts</option>
+			  <option value="2">Dairy</option>
+			  <option value="3">Seafoods</option>
+			  <option value="4">Poultry</option>
+			  <option value="5">No Allergy</option>
+			</select>
+			<br>
+			<br>
 
 			<input type="submit" name="submit" id="submit" value="Create Item" class="btn btn-primary">
 		</form>
 
 	</main>
+	<br>
 
 	<!-- main footer -->
 	<?php include 'partials/main_footer.php'; ?>

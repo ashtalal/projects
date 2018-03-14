@@ -4,12 +4,6 @@ session_start();
 
 require '../connect.php';
 
-$product_name = $_POST['product_name'];
-$price = $_POST['price'];
-$description = $_POST['description'];
-$category = $_POST['category'];
-
-
 $target_dir = "assets/img/meals/";
 
 $target_file = $target_dir . basename($_FILES["uploadFoodImage"]["name"]);
@@ -64,20 +58,12 @@ if ($uploadOk == 0) {
     }
 }
 
-
-$sql = "INSERT INTO meals (product_name, price, image, description, category_id) values ('$product_name','$price','$target_file','$description','$category')";
-
-$result = mysqli_query($conn, $sql);
-
-//check if create new user was successful
-if ($result)
-	header('location: ../login.php');	
-else
-	die('Error: '. $sql . '<br>' . mysqli_error($conn));
-
-mysqli_close($conn);
+$sql = "INSERT INTO meals (image) values ('$target_file')";
+// var_dump($sql);
+mysqli_query($conn, $sql);
 
 
-header('location: ../catalog.php');
+
+header("location: ../catalog.php");
 
 ?>

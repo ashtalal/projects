@@ -33,9 +33,13 @@ include 'partials/head.php';
 		<?php
 
 		$id = $_GET['id'];
+
 		$sql = "SELECT m.product_name, m.price, m.description,  m.image, u.username, f.name, u.image as user_image FROM meals m JOIN food_categories f ON (m.category_id=f.id) JOIN users u ON (u.id=m.merchant) where m.id = '$id'";
+
 		$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+
 		$item = mysqli_fetch_assoc($result);
+		
 		extract($item);
 
 		?>

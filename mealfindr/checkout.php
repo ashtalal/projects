@@ -5,6 +5,13 @@ session_start();
 
 require 'connect.php'; //database connection
 
+
+
+$sql_user = "SELECT * FROM users WHERE username = '".$_SESSION['current_user']."'";
+$result = mysqli_query($conn, $sql_user);
+$user = mysqli_fetch_assoc($result);
+extract($user);
+
 // if (isset($_SESSION['current_user'])) {
 // 	if ($_SESSION['role'] != 'admin')
 // 		header('location: home.php');
@@ -31,6 +38,29 @@ include 'partials/head.php';
 	<main class="wrapper">
 
 		<h1>Checkout</h1>
+		<table style="margin: 0 auto; margin-bottom: 30px;" class="checkout-customer" >
+			<thead>
+				<th>Buyer</th>
+				<th>Home Address</th>
+				<th>Contact</th>
+			</thead>
+			<tbody id="tbody">
+		<?php
+				if (isset($_SESSION['current_user'])) {
+					echo '
+					<tr>
+						<td>' . $first_name .' ' . $last_name . '</td>
+						<td>' . $address . '</td>
+						<td>' . $contact . '</td>
+					</tr>';
+				}
+				// } else if (!isset($_SESSION['current_user']) && isset($_SESSION['message'])) {
+				// 	echo "<label>".$_SESSION['message']."</label><br>";
+				// 	unset($_SESSION['message']);
+				// }
+
+		?>
+
 		<table style="margin: 0 auto;" class="checkout-table">
 			<thead>
 				<th>Product Name</th>
@@ -101,12 +131,14 @@ include 'partials/head.php';
 		<div class="buttons" style="text-align: center;">
 		<a href="<?php echo $_SERVER['HTTP_REFERER']; ?>"><button class="btn btn-default">Back</button></a>
 
-		
 		<button id="deleteItem" class="btn btn-warning btn-md" data-toggle="modal" data-target="#deleteItemModal" data-index="<?php echo $id; ?>">Pay Securely Now</button>
 		</div>
+		<br>
+		<br>
 
 	</main>
 	<br>
+	
 
 		<!-- Modal -->
 		<div id="editItemModal" class="modal fade" role="dialog">

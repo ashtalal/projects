@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://localhost/Jean-Talal/csp2/checkout.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+
+	<title>MealFindr - Checkout</title>
+
+	<!-- imports bootstrap -->
+	<link rel="stylesheet" type="text/css" href="./MealFindr - Checkout_files/bootstrap.min.css">
+
+	<!-- imports custom stylesheet -->
+	<link rel="stylesheet" type="text/css" href="./MealFindr - Checkout_files/style.css">
+
+	<link href="./MealFindr - Checkout_files/css" rel="stylesheet">
+<style id="dark-reader-style" type="text/css">@media screen {
+
+/* Leading rule */
+html {
+  -webkit-filter: !important;
+}
+
+/* Text contrast */
+html {
+  text-shadow: 0 0 0 !important;
+}
+
+/* Full screen */
+*:-webkit-full-screen, *:-webkit-full-screen * {
+  -webkit-filter: none !important;
+}
+
+/* Page background */
+html {
+  background: rgb(255,255,255) !important;
+}
+
+}</style></head>
+<body>
+
+	<!-- main header -->
+	<nav class="navbar navbar-transparent">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost/Jean-Talal/csp2/index.php" style="font-family: &#39;Nunito&#39;, sans-serif; font-size: 30px;">MealFindr</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+            <li>
+              <a href="http://localhost/Jean-Talal/csp2/profile.php">Despacito</a>
+            </li>
+                  <li>
+          <a href="http://localhost/Jean-Talal/csp2/cart.php">My Cart
+            
+                <strong style="color:red;">(4)</strong>
+              
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost/Jean-Talal/csp2/catalog.php">Dishes</a>
+        </li>
+        <li>
+          <a href="http://localhost/Jean-Talal/csp2/about.php">About Us</a>
+        </li>
+        <li>
+          <a href="http://localhost/Jean-Talal/csp2/create_new_item.php">Sell Meals</a>
+        </li>
+                
+            <li>
+              <a href="http://localhost/Jean-Talal/csp2/logout.php">Logout</a>
+            </li>
+           
+    </ul></div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+	<!-- wrapper -->
+	<main class="wrapper">
+
+		<h1>Checkout</h1>
+		<table style="margin: 0 auto;" class="checkout-table">
+			<thead>
+				<tr><th>Product Name</th>
+				<th>Image</th>
+				<th>Price</th>
+				<th>Quantity</th>
+				<th>Subtotal</th>
+			</tr></thead>
+			<tbody id="tbody">
+			
+						<tr>
+							<td><a>Paella</a></td>
+							<td><img src="./MealFindr - Checkout_files/paella.jpg" style="width: 150px; height: 150px;"></td>
+							<td>220</td>
+							<td>2</td>
+							<td id="price">440</td>
+						</tr>
+						
+						<tr>
+							<td><a>Clam Chowder</a></td>
+							<td><img src="./MealFindr - Checkout_files/clam_chowder.jpg" style="width: 150px; height: 150px;"></td>
+							<td>120</td>
+							<td>2</td>
+							<td id="price">240</td>
+						</tr>
+						
+						<tr>
+							<td colspan="4" style="text-align: right;">Shipping Fee</td>
+							<td colspan="2">Free</td>
+						</tr>
+						<tr>
+							<td colspan="4" style="text-align: right;">Total Cost</td>
+							<td colspan="2">680</td>
+						</tr>
+
+												
+			<!-- <td><input id="itemQuantity' . $quantity. '" type="number" min="0"></td> -->
+			</tbody>
+		</table>
+		<br>
+		<div class="buttons" style="text-align: center;">
+		<a href="http://localhost/Jean-Talal/csp2/cart.php"><button class="btn btn-default">Back</button></a>
+
+		
+		<button id="deleteItem" class="btn btn-warning btn-md" data-toggle="modal" data-target="#deleteItemModal" data-index="&lt;br /&gt;
+&lt;b&gt;Notice&lt;/b&gt;:  Undefined variable: id in &lt;b&gt;C:\xampp\htdocs\Jean-Talal\csp2\checkout.php&lt;/b&gt; on line &lt;b&gt;105&lt;/b&gt;&lt;br /&gt;
+">Pay Securely Now</button>
+		</div>
+
+	</main>
+
+		<!-- Modal -->
+		<div id="editItemModal" class="modal fade" role="dialog">
+	 		<div class="modal-dialog">
+
+		    <!-- Modal content-->
+			    <form method="POST" action="http://localhost/Jean-Talal/csp2/assets/update_item.php">
+			    	<input hidden="" name="item_id" value="&lt;br /&gt;
+&lt;b&gt;Notice&lt;/b&gt;:  Undefined variable: id in &lt;b&gt;C:\xampp\htdocs\Jean-Talal\csp2\checkout.php&lt;/b&gt; on line &lt;b&gt;116&lt;/b&gt;&lt;br /&gt;
+">
+				    <div class="modal-content">
+				    	<div class="modal-header">
+				        	<button type="button" class="close" data-dismiss="modal">×</button>
+				        	<h4 class="modal-title">Edit Item Details</h4>
+				      	</div>
+				      	<div id="editItemModalBody" class="modal-body">	
+				      	</div>
+				      	<div class="modal-footer">
+				        	<button type="submit" class="btn btn-default">Save</button>
+				        	<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				      	</div>
+				    </div>
+			    </form>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div id="deleteItemModal" class="modal fade" role="dialog">
+	 		<div class="modal-dialog">
+
+		    <!-- Modal content-->
+			    <form method="POST" action="http://localhost/Jean-Talal/csp2/assets/delete_item.php">
+			    	<input hidden="" name="item_id" value="&lt;br /&gt;
+&lt;b&gt;Notice&lt;/b&gt;:  Undefined variable: id in &lt;b&gt;C:\xampp\htdocs\Jean-Talal\csp2\checkout.php&lt;/b&gt; on line &lt;b&gt;139&lt;/b&gt;&lt;br /&gt;
+">
+				    <div class="modal-content">
+				    	<div class="modal-header">
+				        	<button type="button" class="close" data-dismiss="modal">×</button>
+				        	<h4 class="modal-title">Delete Item</h4>
+				      	</div>
+				      	<div id="deleteItemModalBody" class="modal-body">
+				      	<p>Do you really want to delete this item?</p>	
+				      	</div>
+				      	<div class="modal-footer">
+				        	<button type="submit" class="btn btn-default">Yes</button>
+				        	<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+				      	</div>
+				    </div>
+			    </form>
+			</div>
+		</div>
+
+
+	<!-- main footer -->
+	<footer class="main-footer">
+	<p>Copyright © 2018 by  MealFindr</p>
+</footer>
+	<!-- imports jquery -->
+	<script type="text/javascript" src="./MealFindr - Checkout_files/jquery-3.2.1.min.js.download"></script>
+
+	<!-- imports bootstrap.js -->
+	<script type="text/javascript" src="./MealFindr - Checkout_files/bootstrap.min.js.download"></script>
+
+	<!-- imports custom javascript -->
+	<script type="text/javascript" src="./MealFindr - Checkout_files/script.js.download"></script>
+<script type="text/javascript">
+	$(document).ready(function() { //checks if the DOM is made be
+
+		$('#editItem').click(function() {
+			var itemId = $(this).data('index');
+			// console.log(userId);
+
+			$.get('assets/edit_item.php',
+				{
+					id: itemId
+				},
+				function(data, status) {
+					// console.log(data);
+					$('#editItemModalBody').html(data);
+			});
+		});
+	}); 
+</script>
+
+
+</body></html>
